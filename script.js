@@ -2,6 +2,53 @@
 // FLAMES '26 — INFERNO PARTICLE ENGINE v2.0
 // ═══════════════════════════════════════════════════════
 
+const navbar = document.querySelector(".navbar");
+const navToggle = document.querySelector(".nav-toggle");
+const navMenu = document.querySelector(".nav-menu");
+
+if (navbar && navToggle && navMenu) {
+    const closeMenu = () => {
+        navbar.classList.remove("menu-open");
+        navToggle.setAttribute("aria-expanded", "false");
+    };
+
+    const openMenu = () => {
+        navbar.classList.add("menu-open");
+        navToggle.setAttribute("aria-expanded", "true");
+    };
+
+    navToggle.addEventListener("click", () => {
+        const isOpen = navToggle.getAttribute("aria-expanded") === "true";
+        if (isOpen) {
+            closeMenu();
+        } else {
+            openMenu();
+        }
+    });
+
+    navMenu.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", closeMenu);
+    });
+
+    document.addEventListener("click", (event) => {
+        if (!navbar.contains(event.target)) {
+            closeMenu();
+        }
+    });
+
+    document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") {
+            closeMenu();
+        }
+    });
+
+    window.addEventListener("resize", () => {
+        if (window.innerWidth > 640) {
+            closeMenu();
+        }
+    });
+}
+
 const canvas = document.getElementById("particles-engine");
 if (canvas) {
     const ctx = canvas.getContext("2d");

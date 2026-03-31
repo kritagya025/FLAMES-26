@@ -14,7 +14,18 @@
     <nav class="navbar">
         <div class="nav-container">
             <a href="index.html" class="brand-logo">FLAMES<span>'26</span></a>
-            <button class="btn-premium small" onclick="location.href='register.html?course=ai'">ENROLL_NOW</button>
+            <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="site-menu">
+                <span class="nav-toggle-bar"></span>
+                <span class="nav-toggle-bar"></span>
+                <span class="nav-toggle-bar"></span>
+            </button>
+            <div class="nav-menu" id="site-menu">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#courses">All Courses</a></li>
+                </ul>
+                <a href="register.html?course=ai" class="btn-premium small">ENROLL_NOW</a>
+            </div>
         </div>
     </nav>
     <header class="hero-section">

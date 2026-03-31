@@ -429,6 +429,19 @@ html, body {
 /* ── RESPONSIVE ──────────────────────────────────────── */
 @media (max-width: 720px) {
     .hero-section { padding: 120px 5% 40px; }
+    .hero-content-wrapper {
+        flex-direction: column;
+        gap: 18px;
+        margin-bottom: 30px;
+    }
+    .hero-accent-line {
+        width: 72px;
+        height: 3px;
+        background: linear-gradient(to right, transparent, var(--magma), transparent);
+    }
+    .hero-description {
+        text-align: center;
+    }
     .course-info-strip { gap: 20px; }
     .info-val { font-size: 1.8rem; }
     .roadmap-wrapper::before { left: 28px; }
@@ -455,6 +468,7 @@ html, body {
 }
 @media (max-width: 480px) {
     .hero-eyebrow { font-size: 0.55rem; letter-spacing: 4px; }
+    .hero-description { font-size: 0.78rem; }
     .ms-card { padding: 20px; }
     .ms-title { font-size: 0.85rem; }
     .ms-topics { font-size: 0.65rem; }
