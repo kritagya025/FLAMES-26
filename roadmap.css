@@ -95,7 +95,16 @@ html, body {
     margin: 0 auto 60px;
     padding: 0 24px;
     position: relative;
-    overflow-x: hidden;
+    overflow: visible;
+}
+
+/* Hide scrollbars for the roadmap container */
+.roadmap-wrapper::-webkit-scrollbar {
+    display: none;
+}
+.roadmap-wrapper {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
 /* Vertical spine line */
