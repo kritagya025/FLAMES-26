@@ -3,6 +3,13 @@
    ═══════════════════════════════════════════════════════ */
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800;900&family=Bebas+Neue&display=swap');
 
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
 :root {
     --magma: #ff5e00;
     --magma-hot: #ff8c00;
@@ -54,7 +61,8 @@
 .course-info-strip {
     display: flex;
     justify-content: center;
-    gap: 50px;
+    flex-wrap: wrap;
+    gap: 30px;
     padding: 0 5% 50px;
     max-width: 900px;
     margin: 0 auto;
@@ -87,6 +95,7 @@
     margin: 0 auto 60px;
     padding: 0 24px;
     position: relative;
+    overflow-x: hidden;
 }
 
 /* Vertical spine line */
@@ -158,6 +167,7 @@
     position: relative;
     overflow: hidden;
     transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+    -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     max-width: calc(50% - 52px);
 }
@@ -195,6 +205,7 @@
     line-height: 1;
     color: rgba(255,94,0,0.08);
     transition: color 0.3s;
+    -webkit-user-select: none;
     user-select: none;
     position: absolute;
     right: 20px;
@@ -408,11 +419,16 @@
 
 /* ── RESPONSIVE ──────────────────────────────────────── */
 @media (max-width: 720px) {
+    .hero-section { padding: 120px 5% 40px; }
+    .course-info-strip { gap: 20px; }
+    .info-val { font-size: 1.8rem; }
     .roadmap-wrapper::before { left: 28px; }
     .milestone-item,
     .milestone-item:nth-child(even) {
         flex-direction: row !important;
         align-items: flex-start;
+        width: 100%;
+        margin-left: 0;
     }
     .ms-spacer { display: none; }
     .ms-card {
@@ -427,4 +443,10 @@
         height: 46px;
     }
     .ms-node-num { font-size: 1.1rem; }
+}
+@media (max-width: 480px) {
+    .hero-eyebrow { font-size: 0.55rem; letter-spacing: 4px; }
+    .ms-card { padding: 20px; }
+    .ms-title { font-size: 0.85rem; }
+    .ms-topics { font-size: 0.65rem; }
 }
