@@ -43,7 +43,6 @@
             margin-bottom: 40px;
             background: linear-gradient(to bottom, #fff 40%, var(--magma));
             -webkit-background-clip: text;
-            background-clip: text;
             -webkit-text-fill-color: transparent;
             filter: drop-shadow(0 0 30px rgba(255,94,0,0.4));
         }
@@ -53,7 +52,6 @@
             border: 1px solid rgba(255,94,0,0.18);
             border-radius: 20px;
             padding: 48px;
-            -webkit-backdrop-filter: blur(20px);
             backdrop-filter: blur(20px);
             position: relative;
             overflow: hidden;
@@ -108,7 +106,6 @@
             outline: none;
             transition: border-color 0.3s, box-shadow 0.3s;
             -webkit-appearance: none;
-            appearance: none;
         }
 
         .form-input:focus, .form-select:focus {
@@ -238,7 +235,6 @@
             margin-bottom: 16px;
             background: linear-gradient(to right, #ff2200, #ff5e00, #ff8c00);
             -webkit-background-clip: text;
-            background-clip: text;
             -webkit-text-fill-color: transparent;
             animation: slideUpFade 0.6s 0.3s both;
         }
@@ -361,14 +357,8 @@
     <nav class="navbar">
         <div class="nav-container">
             <a href="index.html" class="brand-logo">FLAMES<span>'26</span></a>
-            <div class="nav-toggle" id="mobile-menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
             <ul class="nav-links">
                 <li><a href="index.html">← Back to Courses</a></li>
-                <li class="mobile-only"><a href="index.html">Courses</a></li>
             </ul>
         </div>
     </nav>
